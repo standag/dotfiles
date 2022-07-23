@@ -5,6 +5,7 @@ apps=(
     google-chrome
     iterm2
     1password
+    1password-cli
     visual-studio-code
     postico
     docker

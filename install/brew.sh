@@ -4,8 +4,8 @@ apps=(
      zsh
      httpie
      redis
-     pyenv
-     pyenv-virtualenv
+    #  pyenv
+    #  pyenv-virtualenv
      powerlevel9k
      mas
      gpg
@@ -13,6 +13,7 @@ apps=(
      postgresql
      curl --with-openssl
      htop
+     pre-commit
 )
 for app in ${apps[@]}; do
     if [[ `brew info fish | grep "Not installed"` ]]; then 
