@@ -1,0 +1,1 @@
+mas install 441258766  # magnet

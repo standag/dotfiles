@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "\"SourceCodePro+Powerline+Awesome Regular\"",
+    "workbench.fontAliasing": "auto",
+    "window.zoomLevel": 2,
+    "files.autoSave": "afterDelay",
+    "python.formatting.provider": "black"
+}
