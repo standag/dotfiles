@@ -1,5 +1,0 @@
-.vscode
-.env
-.venv*
-.mypy_cache
-dist/
