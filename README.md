@@ -1,11 +1,9 @@
 # DotFiles
 
-- install yabai + skhd ( #TODO: add links)
 - install configs + install basics ( run `bootstrap.sh` )
+- install yabai + skhd ( #TODO: add links)
 - install fish as default shell ( update `/etc/shells` + run `chsh`)
-- install fish plugins via `fisher install <plugin name>`:
-    - jorgebucaran/fisher
-    - jhillyerd/plugin-git
+- install fish plugins via `fisher update`:
 - install vim plugins `nvim -c :PackerSync`
 
 ## References:

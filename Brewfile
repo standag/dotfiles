@@ -5,6 +5,8 @@ brew "tree-sitter"
 brew "tmux"
 brew "btop"
 brew "bat"
+brew "httpie"
+brew "jq"
 cask "kitty"
 cask "spotify"
 
@@ -17,6 +19,11 @@ tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-powerline-symbols"
+
+# Apple Store installs
+brew "mas"
+mas "Spark", id: 1176895641
+mas "Fantastical", id: 975937182
 
 # old
 # tap "derailed/k9s"

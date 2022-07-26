@@ -1,0 +1,7 @@
+brew "python@3.9"
+cask "slack"
+cask "1password"
+cask "1password-cli"
+cask "zoom"
+# RancherDesktop - DockerDesktop replacement
+cask "rancher"

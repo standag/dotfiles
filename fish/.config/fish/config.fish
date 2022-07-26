@@ -23,5 +23,8 @@ fish_add_path /usr/local/opt/openssl@1.1/bin
 set -gxa LDFLAGS "-L/usr/local/opt/openssl@1.1/lib "
 set -gxa CPPFLAGS "-I/usr/local/opt/openssl@1.1/include "
 
+# rancher desktop binaries: docker, kubectl, ... # TODO: should I install them separately?
+fish_add_path ~/.rd/bin
+
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/standag/.ghcup/bin $PATH # ghcup-env
 
