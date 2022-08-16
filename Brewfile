@@ -2,6 +2,7 @@ brew "fish"
 brew "fisher"
 brew "neovim"
 brew "tree-sitter"
+brew "ripgrep"
 brew "tmux"
 brew "btop"
 brew "bat"
@@ -9,6 +10,7 @@ brew "httpie"
 brew "jq"
 cask "kitty"
 cask "spotify"
+cask "raycast"
 
 # tilling manager
 brew "yabai"
@@ -19,6 +21,15 @@ tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-powerline-symbols"
+
+# python
+brew "python@3.10"
+brew "poetry"
+brew "pre-commit"
+brew "black"
+brew "isort"
+brew "npm"
+
 
 # Apple Store installs
 brew "mas"

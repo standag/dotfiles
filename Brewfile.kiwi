@@ -1,7 +1,21 @@
+# Kiosk
 brew "python@3.9"
+brew "pillow"
+brew "mupdf"  # need to be install manually "==1.8.x"
+brew "swig"
+brew "freetype"
+brew "postgresql"
+brew "qpdf"
+
+brew "openfortivpn"
+brew "kubectx"
+
 cask "slack"
 cask "1password"
 cask "1password-cli"
 cask "zoom"
 # RancherDesktop - DockerDesktop replacement
 cask "rancher"
+cask "google-cloud-sdk"
+cask "datagrip"
+

@@ -3,11 +3,10 @@ if status is-interactive
 end
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+set -gx LDFLAGS "-L/opt/homebrew/lib"
+set -gx CPPFLAGS "-L/opt/homebrew/include"
 
 alias k kubectl
-
-set -gx LDFLAGS ""
-set -gx CPPFLAGS ""
 
 fish_add_path -a /usr/local/opt/python@3.7/bin
 fish_add_path -a /usr/local/opt/python@3.8/bin
@@ -15,16 +14,11 @@ fish_add_path -a /usr/local/opt/python@3.10/bin
 
 fish_add_path -a ~/.cargo/bin
 
-fish_add_path /usr/local/opt/curl/bin
-set -gxa LDFLAGS "-L/usr/local/opt/curl/lib "
-set -gxa CPPFLAGS "-I/usr/local/opt/curl/include "
-
-fish_add_path /usr/local/opt/openssl@1.1/bin
-set -gxa LDFLAGS "-L/usr/local/opt/openssl@1.1/lib "
-set -gxa CPPFLAGS "-I/usr/local/opt/openssl@1.1/include "
+set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
+fish_add_path -a /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
 
 # rancher desktop binaries: docker, kubectl, ... # TODO: should I install them separately?
-fish_add_path ~/.rd/bin
+# fish_add_path ~/.rd/bin
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/standag/.ghcup/bin $PATH # ghcup-env
 
