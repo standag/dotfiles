@@ -4,9 +4,12 @@ end
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 set -gx LDFLAGS "-L/opt/homebrew/lib"
+set -gx RUSTFLAGS "-L/opt/homebrew/lib"
 set -gx CPPFLAGS "-L/opt/homebrew/include"
+set -gx CFLAGS "-L/opt/homebrew/include"
 
 alias k kubectl
+alias z zellij
 
 fish_add_path -a /usr/local/opt/python@3.7/bin
 fish_add_path -a /usr/local/opt/python@3.8/bin
