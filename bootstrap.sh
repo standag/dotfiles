@@ -6,6 +6,8 @@ NC='\033[0m'
 # install homebrew and homebrew apps
 if ! type brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/standag/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if ! type stow; then 

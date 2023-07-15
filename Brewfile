@@ -3,18 +3,20 @@ brew "fisher"
 brew "neovim"
 brew "tree-sitter"
 brew "ripgrep"
-brew "tmux"
 brew "btop"
 brew "bat"
 brew "httpie"
 brew "jq"
-cask "kitty"
+brew "zellij"
+cask "wezterm"
 cask "spotify"
 cask "raycast"
+cask "cron"
+cask "arc"
 
 # tilling manager
-brew "yabai"
-brew "skhd"
+# brew "yabai"
+# brew "skhd"
 
 # fonts
 tap "homebrew/cask-fonts"
@@ -23,18 +25,21 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-powerline-symbols"
 
 # python
+brew "python@3.9"
 brew "python@3.10"
-brew "poetry"
+brew "python@3.11"
+brew "pdm"
 brew "pre-commit"
 brew "black"
 brew "isort"
+
+# js/ts
 brew "npm"
 
 
 # Apple Store installs
 brew "mas"
 mas "Spark", id: 1176895641
-mas "Fantastical", id: 975937182
 
 # old
 # tap "derailed/k9s"
