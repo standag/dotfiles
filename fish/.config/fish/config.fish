@@ -20,8 +20,12 @@ fish_add_path -a ~/.cargo/bin
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 fish_add_path -a /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
 
-# rancher desktop binaries: docker, kubectl, ... # TODO: should I install them separately?
-# fish_add_path ~/.rd/bin
+# rancher desktop binaries: docker, kubectl, ... 
+fish_add_path -a ~/.rd/bin
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/standag/.ghcup/bin $PATH # ghcup-env
 
+
+# Setting PATH for Python 3.12
+# The original version is saved in /Users/standag/.config/fish/config.fish.pysave
+set -x PATH "/Library/Frameworks/Python.framework/Versions/3.12/bin" "$PATH"
