@@ -1,3 +1,42 @@
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+# [language-server.pylyzer]
+# command = "pylyzer"
+# args = ["--server"]
+
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+
+[language-server.tailwindcss-lsp]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.typescript-lsp]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[language-server.yaml-language-server]
+Config = { yaml = { keyOrdering = false, format = { enable = true } } }
+
+# [language-server.enderpy_lsp]
+# command = "enderpy_lsp"
+
+[language-server.els]
+command = "erg"
+args = ["server"]
+
+[language-server.omnisharp]
+command = "dotnet"
+args = ["/opt/homebrew/opt/omnisharp/libexec/omnisharp/OmniSharp.exe", "-lsp"]
+
+[language-server.elixir-ls]
+command = "elixir-ls"
+config = { elixirLS.dialyzerEnabled = true }
+
+# 
+
 [[language]]
 name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
@@ -7,6 +46,13 @@ auto-format = true
 name = "tsx"
 formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
 auto-format = true
+language-servers = ["typescript-lsp", "tailwindcss-lsp"]
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
+auto-format = true
+language-servers = ["tailwindcss-lsp"]
 
 [[language]]
 name = "javascript"
@@ -15,21 +61,33 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
 roots = ["pyproject.toml"]
-formatter = { command = "black", args = ["--quiet", "-"] }
+language-servers = [ "pyright", "ruff-lsp" ]
 auto-format = true
-#config = {}
 
 [[language]]
 name = "elixir"
 formatter = { command = "mix format" }
 auto-format = true
+scope = "source.elixir"
+injection-regex = "elixir"
+file-types = ["ex", "exs"]
+roots = ["mix.exs"]
+diagnostic-severity = "Hint"
+comment-token = "#"
+indent = {tab-width = 2, unit = " "}
+language-servers = ["elixir-ls"]
 
 [[language]]
 name = "yaml"
 file-types = ["yaml", "yml"]
-# config = { yaml = { keyOrdering = false, format = { enable = true } } }
 auto-format = true
+indent = { unit = " ", tab-width = 2 }
+language-servers = [ "yaml-language-server" ]
 
-
+[[language]]
+name = "erg"
+scope = "source.erg"
+roots = []
+file-types = ["er"]
+language-servers = ["els"]
