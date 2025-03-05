@@ -2,12 +2,26 @@
 command = "pyright-langserver"
 args = ["--stdio"]
 
+[language-server.copilot]
+command = "bun"
+args = [
+  "run",
+  "/Users/standag/bin/helix-gpt",
+  "--handler",
+  "copilot",
+  "--copilotApiKey",
+  "",
+  "--logFile",
+  "~/helix-gpt.log",
+]
+
 # [language-server.pylyzer]
 # command = "pylyzer"
 # args = ["--server"]
 
 [language-server.ruff-lsp]
-command = "ruff-lsp"
+command = "ruff"
+args = ["server"]
 
 [language-server.tailwindcss-lsp]
 command = "tailwindcss-language-server"
@@ -19,6 +33,25 @@ args = ["--stdio"]
 
 [language-server.yaml-language-server]
 Config = { yaml = { keyOrdering = false, format = { enable = true } } }
+
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.eslint.config]
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+experimental = {}
+problems = { shortenToSingleLine = false }
+
+[language-server.eslint.config.codeAction]
+disableRuleComment = { enable = true, location = "separateLine" }
+showDocumentation = { enable = false }
 
 # [language-server.enderpy_lsp]
 # command = "enderpy_lsp"
@@ -35,16 +68,18 @@ args = ["/opt/homebrew/opt/omnisharp/libexec/omnisharp/OmniSharp.exe", "-lsp"]
 command = "elixir-ls"
 config = { elixirLS.dialyzerEnabled = true }
 
-# 
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
 
 [[language]]
 name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+formatter = { command = 'dprint', args = ["fmt", "--stdin", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-formatter = { command = 'prettier', args = ["--stdin-filepath", "file.tsx"] }
+formatter = { command = 'dprint', args = ["fmt", "--stdin", "tsx"] }
 auto-format = true
 language-servers = ["typescript-lsp", "tailwindcss-lsp"]
 
@@ -56,13 +91,13 @@ language-servers = ["tailwindcss-lsp"]
 
 [[language]]
 name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+formatter = { command = 'dprint', args = ["fmt", "--stdin", "javascript"] }
 auto-format = true
 
 [[language]]
 name = "python"
 roots = ["pyproject.toml"]
-language-servers = [ "pyright", "ruff-lsp" ]
+language-servers = ["pyright", "ruff-lsp", "copilot"]
 auto-format = true
 
 [[language]]
@@ -73,9 +108,9 @@ scope = "source.elixir"
 injection-regex = "elixir"
 file-types = ["ex", "exs"]
 roots = ["mix.exs"]
-diagnostic-severity = "Hint"
+diagnostic-severity = "hint"
 comment-token = "#"
-indent = {tab-width = 2, unit = " "}
+indent = { tab-width = 2, unit = " " }
 language-servers = ["elixir-ls"]
 
 [[language]]
@@ -83,7 +118,7 @@ name = "yaml"
 file-types = ["yaml", "yml"]
 auto-format = true
 indent = { unit = " ", tab-width = 2 }
-language-servers = [ "yaml-language-server" ]
+language-servers = ["yaml-language-server"]
 
 [[language]]
 name = "erg"
@@ -91,3 +126,7 @@ scope = "source.erg"
 roots = []
 file-types = ["er"]
 language-servers = ["els"]
+
+[[language]]
+name = "toml"
+language-servers = ["taplo"]

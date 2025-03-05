@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Stanislav Geidl
+[core]
+	excludesfile = ~/.gitignore
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = True
+	dark = True
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default

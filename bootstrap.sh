@@ -14,9 +14,11 @@ if ! type stow; then
     brew install stow
 fi
 
-if [[ -f ~/.config/fish/config.fish ]]; then
-    rm ~/.config/fish/config.fish
-fi
+# if [[ -f ~/.config/fish/config.fish ]]; then
+#     rm ~/.config/fish/config.fish
+# fi
+
+mkdir -p ~/.config/fish
 
 for item in `ls`; do
     if [[ -d $item ]]; then
