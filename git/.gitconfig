@@ -2,6 +2,8 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Stanislav Geidl
+	signingkey = rsa4096/508883107865FB84
+	email = standag@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 	pager = delta
@@ -18,3 +20,5 @@
 
 [diff]
 	colorMoved = default
+[commit]
+	gpgsign = false
