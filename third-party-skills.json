@@ -1,0 +1,10 @@
+{
+  "improve-codebase-architecture": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/improve-codebase-architecture"
+  },
+  "skill-creator": {
+    "url": "https://github.com/anthropics/skills",
+    "path": "skills/skill-creator"
+  }
+}

@@ -21,10 +21,14 @@ fi
 mkdir -p ~/.config/fish
 
 for item in `ls`; do
-    if [[ -d $item ]]; then
+    if [[ -d $item ]] && [[ $item != "skills" ]]; then
         stow $item
     fi
 done
+
+mkdir -p ~/.copilot/skills ~/.claude/skills
+stow -t ~/.copilot/skills skills
+stow -t ~/.claude/skills skills
 
 for brew_file in `ls Brewfile*`; do
     if [[ $brew_file != *.json ]]; then
