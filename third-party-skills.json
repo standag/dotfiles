@@ -6,5 +6,89 @@
   "skill-creator": {
     "url": "https://github.com/anthropics/skills",
     "path": "skills/skill-creator"
+  },
+  "grill-with-docs": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/grill-with-docs"
+  },
+  "ask-matt": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/ask-matt"
+  },
+  "diagnosing-bugs": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/diagnosing-bugs"
+  },
+  "triage": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/triage"
+  },
+  "setup-matt-pocock-skills": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/setup-matt-pocock-skills"
+  },
+  "tdd": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/tdd"
+  },
+  "to-spec": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/to-spec"
+  },
+  "to-tickets": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/to-tickets"
+  },
+  "wayfinder": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/wayfinder"
+  },
+  "implement": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/implement"
+  },
+  "prototype": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/prototype"
+  },
+  "research": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/research"
+  },
+  "domain-modeling": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/domain-modeling"
+  },
+  "codebase-design": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/codebase-design"
+  },
+  "code-review": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/code-review"
+  },
+  "resolving-merge-conflicts": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/engineering/resolving-merge-conflicts"
+  },
+  "grill-me": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/productivity/grill-me"
+  },
+  "grilling": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/productivity/grilling"
+  },
+  "handoff": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/productivity/handoff"
+  },
+  "teach": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/productivity/teach"
+  },
+  "writing-great-skills": {
+    "url": "https://github.com/mattpocock/skills",
+    "path": "skills/productivity/writing-great-skills"
   }
 }
