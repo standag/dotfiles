@@ -38,4 +38,8 @@ for brew_file in `ls Brewfile*`; do
 
 done
 
+# install tools from ~/.config/mise/config.toml
+echo "Installing mise tools ..."
+mise install
+
 echo "${RED}Don't forgot install fisher plugins! Hint: fisher update$NC"

@@ -4,7 +4,7 @@ RED := '\033[0;31m'
 NC := '\033[0m'
 
 # Run full bootstrap
-default: brew stow-dotfiles stow-skills brew-bundle
+default: brew stow-dotfiles stow-skills brew-bundle mise-install
 
 # Install Homebrew if missing
 brew:
@@ -42,6 +42,10 @@ brew-bundle:
         echo "Installing $brew_file ..."
         brew bundle install --file "$brew_file"
     done
+
+# Install tools from ~/.config/mise/config.toml
+mise-install:
+    mise install
 
 # Add a third-party skill
 skill-add repo name: && stow-skills
