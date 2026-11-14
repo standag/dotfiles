@@ -21,7 +21,7 @@ brew:
 # Stow all dotfile packages to ~
 stow-dotfiles:
     #!/usr/bin/env bash
-    mkdir -p ~/.config/fish
+    mkdir -p ~/.config/fish ~/.agents
     for item in */; do
         item="${item%/}"
         [[ "$item" == "skills" ]] && continue

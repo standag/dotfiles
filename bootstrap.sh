@@ -18,7 +18,7 @@ fi
 #     rm ~/.config/fish/config.fish
 # fi
 
-mkdir -p ~/.config/fish
+mkdir -p ~/.config/fish ~/.agents
 
 for item in `ls`; do
     if [[ -d $item ]] && [[ $item != "skills" ]]; then
